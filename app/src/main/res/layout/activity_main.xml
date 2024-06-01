@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Cadastre seu pedido"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitulo"
+        android:layout_marginTop="37dp"
+        android:hint="Digite o Nome" />
+
+    <EditText
+        android:id="@+id/editTextPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNome"
+        android:hint="Pedido" />
+
+    <!-- Botão Salvar -->
+    <Button
+        android:id="@+id/buttonSalvar"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPedido"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:text="Salvar" />
+
+    <TextView
+        android:id="@+id/textViewTituloPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pedidos Cadastrados"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textAlignment="center"
+        android:layout_below="@id/buttonSalvar"
+        android:textStyle="bold|italic" />
+
+
+    <!-- ListView para exibir os pedidos -->
+    <ListView
+        android:id="@+id/listViewPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@id/textViewTituloPedidos"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>
