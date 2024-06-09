@@ -4,14 +4,13 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-
     <TextView
         android:id="@+id/textViewTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Cadastre seu pedido"
+        android:text="Faça seu pedido"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
@@ -22,43 +21,102 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewTitulo"
         android:layout_marginTop="37dp"
-        android:hint="Digite o Nome" />
+        android:hint="Digite o seu nome"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/editTextPedido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextNome"
-        android:hint="Pedido" />
+        android:layout_marginTop="16dp"
+        android:hint="Motivo do pedido"
+        android:minHeight="48dp" />
 
-    <!-- Botão Salvar -->
+    <RadioGroup
+        android:id="@+id/radioGroupTipoPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPedido"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecione:" />
+
+        <RadioButton
+            android:id="@+id/radioOracao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Oração" />
+
+        <RadioButton
+            android:id="@+id/radioJejum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Jejum" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/labelDetalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupTipoPedido"
+        android:layout_marginTop="16dp"
+        android:text="Detalhe seu pedido:" />
+
+    <EditText
+        android:id="@+id/editTextDetalhes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelDetalhes"
+        android:layout_marginTop="8dp"
+        android:hint="A oração feita por um justo pode muito em seus efeitos. Tg 5:16"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:maxLines="6"
+        android:gravity="top"
+        android:scrollbars="vertical" />
+
     <Button
         android:id="@+id/buttonSalvar"
         android:layout_width="116dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPedido"
+        android:layout_below="@id/editTextDetalhes"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="16dp"
         android:text="Salvar" />
+
+   <!--  <Button
+        android:id="@+id/buttonLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar Pedidos"
+        android:layout_below="@id/buttonSalvar"
+        android:layout_marginTop="10dp"
+        /> -->
 
     <TextView
         android:id="@+id/textViewTituloPedidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pedidos Cadastrados"
-        android:textSize="20sp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textAlignment="center"
         android:layout_below="@id/buttonSalvar"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Pedidos Cadastrados"
+        android:textAlignment="center"
+        android:textSize="20sp"
         android:textStyle="bold|italic" />
 
-
-    <!-- ListView para exibir os pedidos -->
     <ListView
         android:id="@+id/listViewPedidos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:layout_below="@id/textViewTituloPedidos"
         android:layout_marginTop="20dp" />
+
 </RelativeLayout>

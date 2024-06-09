@@ -8,29 +8,70 @@
         android:id="@+id/editTextNomeEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nome" />
+        android:hint="Alterar nome"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/editTextPedidoEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextNomeEdit"
-        android:hint="Pedido" />
+        android:layout_marginTop="16dp"
+        android:hint="Alterar o pedido"
+        android:minHeight="48dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTipoPedidoEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPedidoEdit"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecione:" />
+
+        <RadioButton
+            android:id="@+id/radioOracaoEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Oração" />
+
+        <RadioButton
+            android:id="@+id/radioJejumEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Jejum" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextDetalhesEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupTipoPedidoEdit"
+        android:layout_marginTop="16dp"
+        android:hint="Alterar o detalhe do pedido"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/buttonAtualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPedidoEdit"
+        android:layout_below="@id/editTextDetalhesEdit"
+        android:layout_marginTop="16dp"
         android:text="Atualizar" />
 
     <Button
         android:id="@+id/buttonExcluir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPedidoEdit"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="-1dp"
+        android:layout_below="@id/editTextDetalhesEdit"
         android:layout_toEndOf="@id/buttonAtualizar"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
         android:text="Excluir" />
 </RelativeLayout>
